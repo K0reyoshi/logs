@@ -46,9 +46,9 @@ def main():
 	my_email_text = "Dear all,\n\n\t附件为每日waf拦截数据报表，请查收！\n\n来自IP:10.249.255.104 "
 	my_annex_path = waf.get_file()
 	my_annex_name = my_annex_path.split('/')[-1].replace('-','').replace('.xls','')+'-waf_logs.xls'
-	my_sender = 'yangkunlong@smzdm.com'
-	my_password = '@kunlong!Q@W#E$R'
-	my_receiver = ['qijunwen@smzdm.com','yangkunlong@smzdm.com']
+	my_sender = 'username'
+	my_password = 'password'
+	my_receiver = ['email1','email2']
 	my_msg = create_email(my_email_from, my_email_to, my_email_Subject,
                           my_email_text, my_annex_path, my_annex_name)
 	send_email(my_sender, my_password, my_receiver, my_msg)
