@@ -29,7 +29,7 @@ def create_email(email_from, email_to, email_Subject, email_text, annex_path, an
 
 def send_email(sender, password, receiver, msg):
     try:
-        server = smtplib.SMTP_SSL("smtp.smzdm.com", 994) 
+        server = smtplib.SMTP_SSL("smtp.xxxxx.com", 994) 
         server.ehlo()
         server.login(sender, password) 
         server.sendmail(sender, receiver, msg.as_string())  
