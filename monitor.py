@@ -29,10 +29,10 @@ def _format_addr(s):
 
 def send_mail(record_name='',add='',remove=''):
 
-	from_addr = 'yangkunlong@smzdm.com'
-	password = '@kunlong!Q@W#E$R'
-	to_addr = 'yangkunlong@smzdm.com'
-	smtp_server = 'smtp.smzdm.com'
+	from_addr = 'email'
+	password = 'pwd'
+	to_addr = 'toemail'
+	smtp_server = 'smtp.xxxxx.com'
 	add_log = u'内网主机新开放端口信息： \n' 
 	remove_log = u'内网主机已关闭端口信息： \n'
 	for _ in add:
