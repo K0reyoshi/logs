@@ -33,8 +33,8 @@ def send_mail(record_name='',add='',remove=''):
 	password = 'pwd'
 	to_addr = 'toemail'
 	smtp_server = 'smtp.xxxxx.com'
-	add_log = u'ÄÚÍøÖ÷»úĞÂ¿ª·Å¶Ë¿ÚĞÅÏ¢£º \n' 
-	remove_log = u'ÄÚÍøÖ÷»úÒÑ¹Ø±Õ¶Ë¿ÚĞÅÏ¢£º \n'
+    add_log = u'å†…ç½‘ä¸»æœºæ–°å¼€æ”¾ç«¯å£ä¿¡æ¯ï¼š \n'
+    remove_log = u'å†…ç½‘ä¸»æœºå·²å…³é—­ç«¯å£ä¿¡æ¯ï¼š \n'
 	for _ in add:
 		add_log = add_log + _ + '\n'
 
@@ -52,8 +52,8 @@ def send_mail(record_name='',add='',remove=''):
 
 	msg = MIMEText(send_time + '  Network Security Monitor Record : \n' + content, 'plain', 'utf-8')
 	msg['From'] = _format_addr(u'Security Monitor <%s>' % from_addr)
-	msg['To'] = _format_addr(u'¹ÜÀíÔ± <%s>' % to_addr)
-	msg['Subject'] = Header(u'ÄÚÍøÖ÷»ú¿ª·Å¶Ë¿Ú¼à¿ØÈÕ±¨', 'utf-8').encode()
+	msg['To'] = _format_addr(u'ï¿½ï¿½ï¿½ï¿½Ô± <%s>' % to_addr)
+	msg['Subject'] = Header(u'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¶Ë¿Ú¼ï¿½ï¿½ï¿½Õ±ï¿½', 'utf-8').encode()
 
 	server = smtplib.SMTP(smtp_server, 25)
 	server.set_debuglevel(1)
@@ -95,8 +95,8 @@ def get_login(token):
 	result = []
 	data = {
 			'csrf_token':token,
-			'account':'k0reyoshi',
-			'password':'&Y()IJU*&U*H&T780-i43rt'
+			'account':'username',
+			'password':'pwd'
 			}
 	url_login = 'http://10.249.250.33/login'
 	s = requests.Session()
