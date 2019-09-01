@@ -29,12 +29,12 @@ def _format_addr(s):
 
 def send_mail(record_name='',add='',remove=''):
 
-	from_addr = 'yangkunlong@smzdm.com'
-	password = '@kunlong!Q@W#E$R'
-	to_addr = 'yangkunlong@smzdm.com'
-	smtp_server = 'smtp.smzdm.com'
-	add_log = u'ÄÚÍøÖ÷»úÐÂ¿ª·Å¶Ë¿ÚÐÅÏ¢£º \n' 
-	remove_log = u'ÄÚÍøÖ÷»úÒÑ¹Ø±Õ¶Ë¿ÚÐÅÏ¢£º \n'
+	from_addr = 'email'
+	password = ''
+	to_addr = 'toemail'
+	smtp_server = 'smtp.xxxx.com'
+	add_log = u'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ï¿½Å¶Ë¿ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ \n' 
+	remove_log = u'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹Ø±Õ¶Ë¿ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ \n'
 	for _ in add:
 		add_log = add_log + _ + '\n'
 
@@ -52,8 +52,8 @@ def send_mail(record_name='',add='',remove=''):
 
 	msg = MIMEText(send_time + '  Network Security Monitor Record : \n' + content, 'plain', 'utf-8')
 	msg['From'] = _format_addr(u'Security Monitor <%s>' % from_addr)
-	msg['To'] = _format_addr(u'¹ÜÀíÔ± <%s>' % to_addr)
-	msg['Subject'] = Header(u'ÄÚÍøÖ÷»ú¿ª·Å¶Ë¿Ú¼à¿ØÈÕ±¨', 'utf-8').encode()
+	msg['To'] = _format_addr(u'ï¿½ï¿½ï¿½ï¿½Ô± <%s>' % to_addr)
+	msg['Subject'] = Header(u'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¶Ë¿Ú¼ï¿½ï¿½ï¿½Õ±ï¿½', 'utf-8').encode()
 
 	server = smtplib.SMTP(smtp_server, 25)
 	server.set_debuglevel(1)
@@ -95,8 +95,8 @@ def get_login(token):
 	result = []
 	data = {
 			'csrf_token':token,
-			'account':'k0reyoshi',
-			'password':'&Y()IJU*&U*H&T780-i43rt'
+			'account':'username',
+			'password':'password'
 			}
 	url_login = 'http://10.249.250.33/login'
 	s = requests.Session()
