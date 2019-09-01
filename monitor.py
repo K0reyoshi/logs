@@ -30,7 +30,7 @@ def _format_addr(s):
 def send_mail(record_name='',add='',remove=''):
 
 	from_addr = 'email'
-	password = ''
+	password = 'pwd'
 	to_addr = 'toemail'
 	smtp_server = 'smtp.xxxx.com'
 	add_log = u'���������¿��Ŷ˿���Ϣ�� \n' 
