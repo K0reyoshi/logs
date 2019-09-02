@@ -1,2 +1,2 @@
 # logs
-split logs
+split logs tool
